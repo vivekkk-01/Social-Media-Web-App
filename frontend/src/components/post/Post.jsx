@@ -1,4 +1,4 @@
-import { Delete, Edit, MoreVert } from "@material-ui/icons";
+import { Delete, Edit, MoreVert } from "@mui/icons-material";
 import React, { useEffect, useRef, useState } from "react";
 import classes from "./post.module.css";
 import moment from "moment";

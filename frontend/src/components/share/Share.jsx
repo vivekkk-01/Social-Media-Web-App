@@ -7,7 +7,7 @@ import {
   Label,
   PermMedia,
   Room,
-} from "@material-ui/icons";
+} from "@mui/icons-material";
 import { CircularProgress } from "@material-ui/core";
 
 const Share = () => {

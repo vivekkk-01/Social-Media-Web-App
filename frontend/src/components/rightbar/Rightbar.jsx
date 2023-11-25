@@ -3,7 +3,7 @@ import classes from "./rightbar.module.css";
 import { Link, useParams, useRouteLoaderData } from "react-router-dom";
 import { Users } from "../../dummyData";
 import OnlineFriends from "../OnlineFriends/OnlineFriends";
-import { Add, Edit, Remove } from "@material-ui/icons";
+import { Add, Edit, Remove } from "@mui/icons-material";
 import { loader as rootLoader } from "../../pages/root/Root";
 
 const Rightbar = ({ user }) => {

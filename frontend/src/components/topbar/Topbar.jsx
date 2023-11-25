@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./top.module.css";
-import { Search, Person, Chat, Notifications } from "@material-ui/icons";
+import { Search, Person, Chat, Notifications } from "@mui/icons-material";
 import { Link, useRouteLoaderData } from "react-router-dom";
 
 const Topbar = () => {

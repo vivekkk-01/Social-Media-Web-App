@@ -64,7 +64,7 @@ const Messenger = () => {
         sender: userObj.userId,
         text: newMessage,
       };
-      await fetch("http://localhost:8080/message/", {
+      await fetch("https://social-media-backend-vmbf.onrender.com/message/", {
         method: "Post",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,7 @@ const Messenger = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "http://localhost:8080/conversation/" + userObj.userId
+        "https://social-media-backend-vmbf.onrender.com/conversation/" + userObj.userId
       );
 
       const resData = await response.json();
@@ -91,7 +91,7 @@ const Messenger = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "http://localhost:8080/message/" + currentChat?._id
+        "https://social-media-backend-vmbf.onrender.com/message/" + currentChat?._id
       );
 
       const resData = await response.json();

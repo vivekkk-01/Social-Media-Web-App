@@ -15,7 +15,7 @@ const Profile = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "http://localhost:8080/user/single?username=" + param,
+        "https://social-media-backend-vmbf.onrender.com/user/single?username=" + param,
         {
           headers: {
             authorization: `Bearer ${userObj.accessToken}`,

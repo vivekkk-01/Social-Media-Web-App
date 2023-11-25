@@ -46,12 +46,12 @@ export default Feed;
 
 export const loader = async ({ params }) => {
   const userObj = JSON.parse(localStorage.getItem("socialUser"));
-  let url = "http://localhost:8080/post/timeline/" + userObj.userId;
+  let url = "https://social-media-backend-vmbf.onrender.com/post/timeline/" + userObj.userId;
 
   const userName = params.username;
 
   if (userName) {
-    url = "http://localhost:8080/post/user/" + userName;
+    url = "https://social-media-backend-vmbf.onrender.com/post/user/" + userName;
   }
 
   const response = await fetch(url, {

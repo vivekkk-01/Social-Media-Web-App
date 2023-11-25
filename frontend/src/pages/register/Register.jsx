@@ -68,7 +68,7 @@ export const action = async ({ request }) => {
     password: data.get("password"),
     confirmPassword: data.get("confirmPassword"),
   };
-  const response = await fetch("http://localhost:8080/auth/register", {
+  const response = await fetch("https://social-media-backend-vmbf.onrender.com/auth/register", {
     method: "Post",
     headers: {
       "Content-Type": "application/json",

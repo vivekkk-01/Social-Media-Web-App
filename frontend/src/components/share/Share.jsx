@@ -29,7 +29,7 @@ const Share = () => {
     event.preventDefault();
     setIsSubmitting(true);
     (async () => {
-      await fetch("http://localhost:8080/post", {
+      await fetch("https://social-media-backend-vmbf.onrender.com/post", {
         body,
         method: "POST",
         headers: {

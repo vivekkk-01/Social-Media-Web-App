@@ -11,7 +11,7 @@ const Conversation = ({ conversation, user }) => {
       );
       console.log(friendId);
       const response = await fetch(
-        "http://localhost:8080/user/single?userId=" + friendId,
+        "https://social-media-backend-vmbf.onrender.com/user/single?userId=" + friendId,
         {
           headers: {
             authorization: `Bearer ${user.accessToken}`,

@@ -46,7 +46,7 @@ const Sidebar = () => {
     setIsDeleteWait(true);
     localStorage.removeItem("socialUser");
     (async () => {
-      await fetch("http://localhost:8080/user/delete/" + userObj.userId, {
+      await fetch("https://social-media-backend-vmbf.onrender.com/user/delete/" + userObj.userId, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${userObj.accessToken}`,

@@ -23,7 +23,7 @@ export const loader = async () => {
     return redirect("/login");
   }
   const response = await fetch(
-    `http://localhost:8080/user/single?userId=${socialUser.userId}`,
+    `https://social-media-backend-vmbf.onrender.com/user/single?userId=${socialUser.userId}`,
     {
       headers: {
         authorization: `Bearer ${socialUser.accessToken}`,

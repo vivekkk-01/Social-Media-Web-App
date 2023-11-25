@@ -28,7 +28,7 @@ const Post = ({ post, userId }) => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "http://localhost:8080/user/single?userId=" + userId,
+        "https://social-media-backend-vmbf.onrender.com/user/single?userId=" + userId,
         {
           headers: {
             authorization: "Bearer " + userObj.accessToken,
@@ -45,7 +45,7 @@ const Post = ({ post, userId }) => {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
     (async () => {
-      await fetch(`http://localhost:8080/post/like/${post._id}`, {
+      await fetch(`https://social-media-backend-vmbf.onrender.com/post/like/${post._id}`, {
         method: "PUT",
         headers: {
           authorization: `Bearer ${userObj.accessToken}`,
@@ -62,7 +62,7 @@ const Post = ({ post, userId }) => {
     setIsEdit(false);
     setIsEditing(true);
     (async () => {
-      await fetch("http://localhost:8080/post/" + postId, {
+      await fetch("https://social-media-backend-vmbf.onrender.com/post/" + postId, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${userObj.accessToken}`,
@@ -81,7 +81,7 @@ const Post = ({ post, userId }) => {
   const updatePostHandler = (postId) => {
     setIsEditingPost(true);
     (async () => {
-      await fetch("http://localhost:8080/post/" + postId, {
+      await fetch("https://social-media-backend-vmbf.onrender.com/post/" + postId, {
         method: "PUT",
         headers: {
           authorization: `Bearer ${userObj.accessToken}`,
@@ -189,7 +189,7 @@ const Post = ({ post, userId }) => {
           )}
           <img
             className={classes.postImg}
-            src={`http://localhost:8080/${post.img}`}
+            src={`https://social-media-backend-vmbf.onrender.com/${post.img}`}
             alt=""
           />
         </div>

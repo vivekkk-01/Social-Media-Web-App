@@ -13,7 +13,7 @@ const ChatOnline = ({
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "http://localhost:8080/user/friends?userId=" + currentId,
+        "https://social-media-backend-vmbf.onrender.com/user/friends?userId=" + currentId,
         {
           headers: {
             authorization: `Bearer ${accessToken}`,
@@ -32,7 +32,7 @@ const ChatOnline = ({
   const handleChat = (friend) => {
     (async () => {
       const response = await fetch(
-        `http://localhost:8080/conversation/find/${currentId}/${friend._id}`
+        `https://social-media-backend-vmbf.onrender.com/conversation/find/${currentId}/${friend._id}`
       );
 
       const resData = await response.json();

@@ -26,7 +26,7 @@ const Rightbar = ({ user }) => {
     if (username) {
       (async () => {
         const response = await fetch(
-          `http://localhost:8080/user/friends?username=${username}`,
+          `https://social-media-backend-vmbf.onrender.com/user/friends?username=${username}`,
           {
             headers: {
               authorization: `Bearer ${userObj.accessToken}`,
@@ -46,7 +46,7 @@ const Rightbar = ({ user }) => {
     setIsFollowing(!isFollowing);
     if (isFollowing) {
       (async () => {
-        await fetch(`http://localhost:8080/user/unfollow/${user._id}`, {
+        await fetch(`https://social-media-backend-vmbf.onrender.com/user/unfollow/${user._id}`, {
           method: "PUT",
           headers: {
             authorization: `Bearer ${userObj.accessToken}`,
@@ -55,7 +55,7 @@ const Rightbar = ({ user }) => {
       })();
     } else {
       (async () => {
-        await fetch(`http://localhost:8080/user/follow/${user._id}`, {
+        await fetch(`https://social-media-backend-vmbf.onrender.com/user/follow/${user._id}`, {
           method: "PUT",
           headers: {
             authorization: `Bearer ${userObj.accessToken}`,

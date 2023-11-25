@@ -1,0 +1,103 @@
+.container {
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1877f2;
+  overflow-x: hidden;
+}
+
+.left {
+  flex: 3;
+  margin-left: 1.5rem;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+}
+
+.center {
+  flex: 5;
+}
+
+.centerContainer {
+  width: 100%;
+  height: 30px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  margin: 0 9px;
+  font-size: 20px !important;
+}
+
+.centerInput {
+  width: 90%;
+  font-size: 0.9rem;
+  outline: none;
+  border: none;
+}
+
+.right {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+}
+
+.rightLinks {
+  display: flex;
+  align-items: center;
+}
+
+.rightLinks span {
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.rightIcons {
+  display: flex;
+  align-items: center;
+}
+
+.iconItem {
+  margin-right: 1rem;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.iconBadge {
+  position: absolute;
+  background-color: red;
+  padding: 0 0.25rem;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -4px;
+  right: -5px;
+}
+
+.profileImg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}

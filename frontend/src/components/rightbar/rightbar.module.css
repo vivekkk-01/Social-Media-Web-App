@@ -1,0 +1,103 @@
+.rightbar {
+  flex: 3.5;
+  padding: 15px 15px 0 0;
+}
+
+.top {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.topImg {
+  margin-right: 10px;
+  width: 50px;
+}
+
+.topText {
+  font-size: 1.1rem;
+}
+
+.centerImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bottom {
+  margin: 10px 0;
+}
+
+.bottomTitle {
+  margin: 20px 0;
+}
+
+.userInfoItem {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.userInfoItemKey {
+  color: #444;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+
+.userInfoItemValue {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.editIcon {
+  font-size: 1.4rem !important;
+  flex-basis: 10%;
+  cursor: pointer;
+}
+
+.userFriends {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.userFriendItem {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9rem;
+  align-items: center;
+  text-decoration: none;
+  color: #444;
+}
+
+.userFriendItem span {
+  margin-top: 0.1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.userFriendImg {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.userInfo {
+  margin-top: 1rem;
+}
+
+.followBtn {
+  padding: 0.5rem;
+  background-color: #1775ee;
+  border: none;
+  width: 7rem;
+  border-radius: 7px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1rem;
+}

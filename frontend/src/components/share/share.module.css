@@ -1,0 +1,95 @@
+.share {
+  width: 95%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+  margin: 1rem;
+  position: relative;
+}
+
+.wrapper {
+  padding: 20px;
+}
+
+.shareTop {
+  display: flex;
+  align-items: center;
+}
+
+.shareInput {
+  outline: none;
+  border: none;
+  width: 100%;
+}
+
+.shareImg {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.hr {
+  margin: 20px 0;
+  border-spacing: 0.1rem;
+}
+
+.shareBottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bottomItems {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.bottomItem {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.shareIcon {
+  margin-right: 5px;
+}
+
+.button {
+  background-color: darkgreen;
+  color: white;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 7px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.isSubmitting {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  right: 1rem;
+  top: 1rem;
+}
+
+.shareImgContainer {
+  padding: 15px;
+  position: relative;
+}
+
+.shareImgPrev {
+  width: 100%;
+  object-fit: cover;
+}
+
+.shareCancelImg {
+  position: absolute;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+}

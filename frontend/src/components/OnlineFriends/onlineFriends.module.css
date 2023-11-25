@@ -1,0 +1,33 @@
+.bottomItem {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.friendImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+.friend {
+  position: relative;
+}
+
+.friendBadge {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: limegreen;
+  top: 0;
+  right: 15px;
+}
+
+.friendName {
+  font-size: 1rem;
+  font-weight: 500;
+}

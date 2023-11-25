@@ -23,6 +23,9 @@
     "timeago.js": "^4.0.2",
     "web-vitals": "^2.1.4"
   },
+  "resolutions": {
+    "package-name": "desired-version"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

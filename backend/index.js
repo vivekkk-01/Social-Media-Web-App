@@ -6,6 +6,7 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const fs = require("fs");
 const path = require("path");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -13,23 +14,11 @@ const app = express();
 
 const HttpError = require("./models/http-error");
 
+app.use(cors());
 app.use(bodyParser.json());
 app.use("/uploads/images", express.static(path.join("uploads", "images")));
 app.use(morgan("common"));
 app.use(helmet());
-
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept, authorization"
-  );
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "GET, POST, DELETE, PATCH, PUT"
-  );
-  next();
-});
 
 const userRoutes = require("./routes/user");
 const authRoutes = require("./routes/auth");

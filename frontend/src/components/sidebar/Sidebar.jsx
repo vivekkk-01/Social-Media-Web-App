@@ -17,7 +17,7 @@ import {
 import { Users } from "../../dummyData";
 import CloseFriend from "../closeFriend/CloseFriend";
 import Modal from "../modal/Modal";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 
 const Sidebar = () => {
   const userObj = JSON.parse(localStorage.getItem("socialUser"));

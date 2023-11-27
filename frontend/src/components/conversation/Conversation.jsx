@@ -9,7 +9,6 @@ const Conversation = ({ conversation, user }) => {
       const friendId = conversation.members.find(
         (member) => member !== user.userId
       );
-      console.log(friendId);
       const response = await fetch(
         "https://social-media-backend-vmbf.onrender.com/user/single?userId=" + friendId,
         {
@@ -30,7 +29,7 @@ const Conversation = ({ conversation, user }) => {
         src={
           friend?.profilePicture
             ? friend?.profilePicture
-            : "https://raw.githubusercontent.com/safak/youtube/mern-social-app/client/public/assets/person/noAvatar.png"
+            : "https://www.pngkey.com/png/detail/121-1219160_small-facebook-no-profile-picture-girl.png"
         }
         alt=""
       />

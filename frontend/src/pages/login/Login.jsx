@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./login.module.css";
 import { Form, redirect, useNavigation, Link } from "react-router-dom";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 
 const Login = () => {
   const submit = useNavigation();
@@ -44,7 +44,6 @@ const Login = () => {
 export default Login;
 
 export const action = async ({ request }) => {
-  console.log("LOGIN");
   const data = await request.formData();
   const userData = {
     email: data.get("email"),
@@ -73,7 +72,6 @@ export const action = async ({ request }) => {
 export const loader = () => {
   const userObj = localStorage.getItem("socialUser");
   const user = JSON.parse(userObj);
-  console.log("let's see...");
   if (user) {
     return redirect("/");
   }

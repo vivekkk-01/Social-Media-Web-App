@@ -4,7 +4,6 @@ import { Outlet, redirect, useRouteLoaderData } from "react-router-dom";
 
 const Root = () => {
   const data = useRouteLoaderData("user");
-  console.log(data.user);
   return (
     <>
       <Topbar />
@@ -18,7 +17,6 @@ export default Root;
 export const loader = async () => {
   const userObj = localStorage.getItem("socialUser");
   const socialUser = JSON.parse(userObj);
-  console.log("let's see...", socialUser);
   if (!socialUser) {
     return redirect("/login");
   }

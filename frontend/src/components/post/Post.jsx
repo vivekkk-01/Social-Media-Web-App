@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import classes from "./post.module.css";
 import moment from "moment";
 import { Link, useRouteLoaderData } from "react-router-dom";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 import Modal from "../modal/Modal";
 
 const Post = ({ post, userId }) => {
@@ -28,7 +28,8 @@ const Post = ({ post, userId }) => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "https://social-media-backend-vmbf.onrender.com/user/single?userId=" + userId,
+        "https://social-media-backend-vmbf.onrender.com/user/single?userId=" +
+          userId,
         {
           headers: {
             authorization: "Bearer " + userObj.accessToken,
@@ -45,16 +46,19 @@ const Post = ({ post, userId }) => {
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);
     (async () => {
-      await fetch(`https://social-media-backend-vmbf.onrender.com/post/like/${post._id}`, {
-        method: "PUT",
-        headers: {
-          authorization: `Bearer ${userObj.accessToken}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          userId: currentUser.user._id,
-        }),
-      });
+      await fetch(
+        `https://social-media-backend-vmbf.onrender.com/post/like/${post._id}`,
+        {
+          method: "PUT",
+          headers: {
+            authorization: `Bearer ${userObj.accessToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            userId: currentUser.user._id,
+          }),
+        }
+      );
     })();
   };
 
@@ -62,12 +66,15 @@ const Post = ({ post, userId }) => {
     setIsEdit(false);
     setIsEditing(true);
     (async () => {
-      await fetch("https://social-media-backend-vmbf.onrender.com/post/" + postId, {
-        method: "DELETE",
-        headers: {
-          authorization: `Bearer ${userObj.accessToken}`,
-        },
-      });
+      await fetch(
+        "https://social-media-backend-vmbf.onrender.com/post/" + postId,
+        {
+          method: "DELETE",
+          headers: {
+            authorization: `Bearer ${userObj.accessToken}`,
+          },
+        }
+      );
       setTimeout(() => {
         window.location.reload();
       }, 1500);
@@ -81,14 +88,17 @@ const Post = ({ post, userId }) => {
   const updatePostHandler = (postId) => {
     setIsEditingPost(true);
     (async () => {
-      await fetch("https://social-media-backend-vmbf.onrender.com/post/" + postId, {
-        method: "PUT",
-        headers: {
-          authorization: `Bearer ${userObj.accessToken}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ desc: descRef.current.value }),
-      });
+      await fetch(
+        "https://social-media-backend-vmbf.onrender.com/post/" + postId,
+        {
+          method: "PUT",
+          headers: {
+            authorization: `Bearer ${userObj.accessToken}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ desc: descRef.current.value }),
+        }
+      );
       setIsEditingPost(false);
       setIsEdit(false);
       setEditPost(false);
@@ -107,7 +117,7 @@ const Post = ({ post, userId }) => {
                 src={
                   user?.profilePicture
                     ? user?.profilePicture
-                    : "https://raw.githubusercontent.com/safak/youtube/mern-social-app/client/public/assets/person/noAvatar.png"
+                    : "https://www.pngkey.com/png/detail/121-1219160_small-facebook-no-profile-picture-girl.png"
                 }
                 alt=""
               />

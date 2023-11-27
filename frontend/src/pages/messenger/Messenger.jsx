@@ -80,7 +80,8 @@ const Messenger = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "https://social-media-backend-vmbf.onrender.com/conversation/" + userObj.userId
+        "https://social-media-backend-vmbf.onrender.com/conversation/" +
+          userObj.userId
       );
 
       const resData = await response.json();
@@ -91,7 +92,8 @@ const Messenger = () => {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        "https://social-media-backend-vmbf.onrender.com/message/" + currentChat?._id
+        "https://social-media-backend-vmbf.onrender.com/message/" +
+          currentChat?._id
       );
 
       const resData = await response.json();
@@ -100,7 +102,8 @@ const Messenger = () => {
   }, [currentChat]);
 
   useEffect(() => {
-    scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    scrollRef.current &&
+      scrollRef.current.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
   return (
     <div className={classes.messenger}>

@@ -8,7 +8,7 @@ import {
   PermMedia,
   Room,
 } from "@mui/icons-material";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 
 const Share = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -59,7 +59,7 @@ const Share = () => {
             src={
               userData?.profilePicture
                 ? userData?.profilePicture
-                : "https://raw.githubusercontent.com/safak/youtube/mern-social-app/client/public/assets/person/noAvatar.png"
+                : "https://www.pngkey.com/png/detail/121-1219160_small-facebook-no-profile-picture-girl.png"
             }
             alt=""
           />

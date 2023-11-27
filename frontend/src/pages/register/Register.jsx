@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./register.module.css";
 import { Form, Link, redirect, useNavigation } from "react-router-dom";
-import { CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@mui/material";
 
 const Register = () => {
   const submit = useNavigation();

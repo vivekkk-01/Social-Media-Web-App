@@ -163,7 +163,7 @@ const Rightbar = ({ user }) => {
                   src={
                     friend.profilePicture
                       ? friend.profilePicture
-                      : "https://raw.githubusercontent.com/safak/youtube/mern-social-app/client/public/assets/person/noAvatar.png"
+                      : "https://www.pngkey.com/png/detail/121-1219160_small-facebook-no-profile-picture-girl.png"
                   }
                   alt=""
                 />

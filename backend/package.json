@@ -12,7 +12,6 @@
     "start": "nodemon index.js",
     "build": "node index.js"
   },
-  "homepage": "https://social-media-9007.onrender.com/backend",
   "author": "",
   "license": "ISC",
   "dependencies": {

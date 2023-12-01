@@ -32,8 +32,11 @@ app.use("/auth", authRoutes);
 app.use("/conversation", conversationRoutes);
 app.use("/message", messageRoutes);
 
-app.get("/frontend", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
+app.use('/frontend', express.static(path.join(__dirname, 'frontend/build')));
+
+// Catch-all route to serve the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
 });
 
 app.use((req, res, next) => {

@@ -32,11 +32,16 @@ app.use("/auth", authRoutes);
 app.use("/conversation", conversationRoutes);
 app.use("/message", messageRoutes);
 
-app.use('/frontend', express.static(path.join(__dirname, 'frontend/build')));
+app.use(
+  "/frontend",
+  express.static(path.join(__dirname, "https://social-media-9007.onrender.com"))
+);
 
 // Catch-all route to serve the React app
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/build', 'index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "https://social-media-9007.onrender.com", "index.html")
+  );
 });
 
 app.use((req, res, next) => {

@@ -32,11 +32,6 @@ app.use("/auth", authRoutes);
 app.use("/conversation", conversationRoutes);
 app.use("/message", messageRoutes);
 
-app.use(
-  "/frontend",
-  express.static(path.join(__dirname, "https://social-media-9007.onrender.com"))
-);
-
 app.use((err, req, res, next) => {
   if (req.file) {
     fs.unlink(req.file.path, (err) => {

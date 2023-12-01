@@ -37,20 +37,6 @@ app.use(
   express.static(path.join(__dirname, "https://social-media-9007.onrender.com"))
 );
 
-// Catch-all route to serve the React app
-app.get("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "https://social-media-9007.onrender.com", "index.html")
-  );
-});
-
-app.use((req, res, next) => {
-  const error = new HttpError("Couldn't find this route.", 404);
-  next(error);
-});
-
-// Catch-all route to serve the React app
-
 app.use((err, req, res, next) => {
   if (req.file) {
     fs.unlink(req.file.path, (err) => {

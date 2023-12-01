@@ -37,11 +37,10 @@ app.use((req, res, next) => {
   next(error);
 });
 
-
 // Catch-all route to serve the React app
-app.get("/frontend", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
-});
+// app.get("/frontend", (req, res) => {
+//   res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
+// });
 
 app.use((err, req, res, next) => {
   if (req.file) {

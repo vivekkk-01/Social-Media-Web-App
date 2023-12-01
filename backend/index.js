@@ -16,11 +16,7 @@ const HttpError = require("./models/http-error");
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "build")));
 
-app.get("/*", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "index.html"));
-});
 app.use("/uploads/images", express.static(path.join("uploads", "images")));
 app.use(morgan("common"));
 app.use(helmet());
@@ -36,7 +32,11 @@ app.use("/post", postRoutes);
 app.use("/auth", authRoutes);
 app.use("/conversation", conversationRoutes);
 app.use("/message", messageRoutes);
+app.use(express.static(path.join(__dirname, "build")));
 
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "build", "index.html"));
+});
 app.use((err, req, res, next) => {
   if (req.file) {
     fs.unlink(req.file.path, (err) => {

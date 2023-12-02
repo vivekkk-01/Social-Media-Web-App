@@ -27,11 +27,17 @@ const postRoutes = require("./routes/post");
 const conversationRoutes = require("./routes/conversation");
 const messageRoutes = require("./routes/message");
 
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
 app.use("/user", userRoutes);
 app.use("/post", postRoutes);
 app.use("/auth", authRoutes);
 app.use("/conversation", conversationRoutes);
 app.use("/message", messageRoutes);
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+});
 
 app.use((err, req, res, next) => {
   if (req.file) {

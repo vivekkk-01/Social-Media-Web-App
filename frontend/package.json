@@ -6,7 +6,6 @@
     "npm": "9.7.1",
     "node": "19.6.0"
   },
-  "homepage": "https://social-media-9007.onrender.com/build",
   "dependencies": {
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.18",

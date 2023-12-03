@@ -18,7 +18,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/uploads/images", express.static(path.join("uploads", "images")));
-app.use(morgan("common"));
 app.use(helmet());
 
 const userRoutes = require("./routes/user");
@@ -27,11 +26,18 @@ const postRoutes = require("./routes/post");
 const conversationRoutes = require("./routes/conversation");
 const messageRoutes = require("./routes/message");
 
+app.use(express.static(path.join(__dirname, "..", "build")));
+
 app.use("/user", userRoutes);
 app.use("/post", postRoutes);
 app.use("/auth", authRoutes);
 app.use("/conversation", conversationRoutes);
 app.use("/message", messageRoutes);
+
+app.get("/*", (req, res) => {
+  console.log("Found a request from frontend...");
+  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+});
 
 app.use((err, req, res, next) => {
   if (req.file) {

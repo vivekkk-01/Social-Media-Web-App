@@ -14,7 +14,10 @@ const app = express();
 
 const HttpError = require("./models/http-error");
 
-app.use(cors());
+app.use(cors(
+  {origin: "https://social-media-9007.onrender.com/"}
+));
+
 app.use(bodyParser.json());
 
 app.use("/uploads/images", express.static(path.join("uploads", "images")));

@@ -14,9 +14,7 @@ const app = express();
 
 const HttpError = require("./models/http-error");
 
-app.use(cors(
-  {origin: "https://social-media-9007.onrender.com"}
-));
+app.use(cors({ origin: "https://social-media-9007.onrender.com" }));
 
 app.use(bodyParser.json());
 
@@ -39,6 +37,11 @@ app.use("/message", messageRoutes);
 
 app.get("/*", (req, res) => {
   console.log("Found a request from frontend...");
+  const data = fs.readFileSync(
+    path.join(__dirname, "..", "frontend", "build", "index.html"),
+    "utf8"
+  );
+  console.log("File contents:", data);
   res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"));
 });
 

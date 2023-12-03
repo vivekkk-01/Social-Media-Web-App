@@ -27,7 +27,7 @@ const postRoutes = require("./routes/post");
 const conversationRoutes = require("./routes/conversation");
 const messageRoutes = require("./routes/message");
 
-app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
+app.use(express.static(path.join(__dirname, "..", "frontend", "public")));
 
 app.use("/user", userRoutes);
 app.use("/post", postRoutes);
@@ -38,7 +38,7 @@ app.use("/message", messageRoutes);
 app.get("/*", (req, res) => {
   console.log("Found a request from frontend...");
   const data = fs.readFileSync(
-    path.join(__dirname, "..", "frontend", "build", "index.html"),
+    path.join(__dirname, "..", "frontend", "public", "index.html"),
     "utf8"
   );
   console.log("File contents:", data);

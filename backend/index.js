@@ -15,7 +15,7 @@ const app = express();
 const HttpError = require("./models/http-error");
 
 app.use(cors(
-  {origin: "https://social-media-9007.onrender.com/"}
+  {origin: "https://social-media-9007.onrender.com"}
 ));
 
 app.use(bodyParser.json());

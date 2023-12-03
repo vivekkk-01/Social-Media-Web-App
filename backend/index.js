@@ -45,19 +45,19 @@ app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"));
 });
 
-app.use((err, req, res, next) => {
-  if (req.file) {
-    fs.unlink(req.file.path, (err) => {
-      console.log(err);
-    });
-  }
-  if (res.headerSent) {
-    return next(err);
-  }
-  res.status(err.code || 500);
-  res.json({ message: err.message || "An unknown error occurred!" });
-  next(err);
-});
+// app.use((err, req, res, next) => {
+//   if (req.file) {
+//     fs.unlink(req.file.path, (err) => {
+//       console.log(err);
+//     });
+//   }
+//   if (res.headerSent) {
+//     return next(err);
+//   }
+//   res.status(err.code || 500);
+//   res.json({ message: err.message || "An unknown error occurred!" });
+//   next(err);
+// });
 
 mongoose.connect(process.env.MONGO_URL).then(() => {
   console.log("Backend server is running...");

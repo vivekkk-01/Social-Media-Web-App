@@ -1,6 +1,0 @@
-staticSites:
-  - name: social-media
-    dir: build
-    routes:
-      - src: ^/(.*)
-        dest: /index.html

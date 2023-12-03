@@ -1,5 +1,0 @@
-services:
-  - type: web
-    name: social-media-backend
-    buildCommand: npm run build
-    startCommand: npm start

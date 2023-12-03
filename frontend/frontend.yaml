@@ -1,6 +1,6 @@
 staticSites:
-  - name: frontend
-    dir: /build
+  - name: social-media
+    dir: build
     routes:
       - src: ^/(.*)
         dest: /index.html

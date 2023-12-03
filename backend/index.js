@@ -39,7 +39,7 @@ app.use("/message", messageRoutes);
 
 app.get("/*", (req, res) => {
   console.log("Found a request from frontend...");
-  res.sendFile(path.join(__dirname, "..", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"));
 });
 
 app.use((err, req, res, next) => {

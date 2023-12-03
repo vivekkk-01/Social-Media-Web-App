@@ -42,7 +42,7 @@ app.get("/*", (req, res) => {
     "utf8"
   );
   console.log("File contents:", data);
-  res.sendFile(path.join(__dirname, "..", "frontend", "build", "index.html"));
+  res.sendFile(path.join(__dirname, "..", "frontend", "public", "index.html"));
 });
 
 // app.use((err, req, res, next) => {

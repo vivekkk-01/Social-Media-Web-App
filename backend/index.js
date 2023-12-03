@@ -29,7 +29,7 @@ const postRoutes = require("./routes/post");
 const conversationRoutes = require("./routes/conversation");
 const messageRoutes = require("./routes/message");
 
-app.use(express.static(path.join(__dirname, "..", "build")));
+app.use(express.static(path.join(__dirname, "..", "frontend", "build")));
 
 app.use("/user", userRoutes);
 app.use("/post", postRoutes);
